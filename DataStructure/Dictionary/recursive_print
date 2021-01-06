@@ -1,0 +1,47 @@
+import requests
+import json
+
+
+def recursive_key_values(dictionary):
+    """recursive_key_values.
+        Print all keys and values anywhere in a dictionary
+    Args:
+        dictionary: any dictionary
+    Returns:
+        tuple:
+    """
+    
+    for key, value in dictionary.items():
+        i = 0
+        if type(value) is str:
+            yield (key, value)
+        elif type(value) is dict:
+            yield from recursive_key_values(value)
+        elif type(value) in (list, tuple, set):
+            for seq_item in value:
+                yield from recursive_key_values({"%s_%s"%(key,i) : seq_item})
+                i = i + 1
+                print(i)
+        else:
+            yield (key, str(value))
+
+
+mydata =  {
+    "key2": {
+        "key2.0": "value1",
+        "key2.1":...,
+        "key2.2": {
+            "key2.2.0": "value2"
+        }
+    },
+    "key1": {
+        "key1.0": "value3"
+    },
+}
+mydata["key3"] = {1, 2, 3} # set
+mydata["key4"] = [4, 5, 6] # list
+mydata["key5"] = (7, 8, 9) # tuple
+
+if __name__ == "__main__":
+    for key, value in recursive_key_values(mydata):
+        print("{%s}: {%s}"%(key, value))
