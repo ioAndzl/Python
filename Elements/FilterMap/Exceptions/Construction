@@ -1,0 +1,26 @@
+
+
+def try_except_else(): 
+    try: 
+        num = int(input("Enter a number"))
+        assert num % 2 == 0
+    except:
+        print('Not an even number')
+    else:
+        reciprocal = 1/ num
+        print(reciprocal)
+
+def try_except_finally(): 
+    try: 
+        num = int(input("Enter a number"))
+        assert num % 2 == 0
+    except:
+        print('Not an even number')
+    finally:
+        reciprocal = 1 / num
+        print(reciprocal)
+
+
+if __name__ == "__main__":
+    #try_except_else()
+    try_except_finally()

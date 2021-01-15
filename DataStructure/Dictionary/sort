@@ -1,0 +1,27 @@
+"""
+Sorting a dictionary to an Iterable of tuples.
+https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area
+"""
+
+countries = {
+    "Taiwan": 36193,
+    "Canada": 9984670,
+    "United States": 9525067,
+    "Russia": 17098246,
+    "Argentina": 2780400,
+    "Zambia": 752612,
+    "China": 9596961,
+}
+
+assert dict(sorted(countries.items(), key=lambda kv: kv[1], reverse=False)) == {
+    "Taiwan": 36193,
+    "Zambia": 752612,
+    "Argentina": 2780400,
+    "United States": 9525067,
+    "China": 9596961,
+    "Canada": 9984670,
+    "Russia": 17098246,
+}
+
+dicto = dict(sorted(countries.items(), key=lambda kv: kv[0], reverse=False))
+print(dicto)

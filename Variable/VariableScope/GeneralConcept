@@ -1,0 +1,44 @@
+def outer_function():
+    a = 20
+    def inner_function():
+        a = 30
+        print('a=%i'%(a))
+    inner_function()
+    print('a=%i'%(a))
+
+def outer_function_outer_global():
+    global a
+    a = 20
+    def inner_function():
+        a = 30
+          print('a=%i'%(a))
+    inner_function()
+
+
+
+
+    print('a=%i'%(a))
+
+def outer_function_outer_and_inner_global():
+    global a
+    a = 20
+    def inner_function():
+        global a
+        a = 30
+        print('a=%i'%(a))
+    inner_function()
+    print('a=%i'%(a))
+
+
+
+if __name__ == "__main__":
+    a = 10
+    print('Run Outer Function')
+    outer_function()
+    print('a=%i'%(a))
+    print('Run Outer Function with outer Global')
+    outer_function_outer_global()
+    print('a=%i'%(a))
+    print('Run Outer Function with outer and inner Global')
+    outer_function_outer_and_inner_global()
+    print('a=%i'%(a))

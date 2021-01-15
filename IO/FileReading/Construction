@@ -1,0 +1,18 @@
+def readlines(text):
+    f = open(text, "r", encoding='utf-8')
+    print(f.readlines())
+    f.close() 
+
+def writelines(text):
+    try:
+        with open("text.txt", "a", encoding="utf-8") as f:
+            f.write('I am learning python \n' )
+    finally:
+        f.close()
+
+
+if __name__ == "__main__"  :
+    text = "text.txt"
+    readlines(text)
+    writelines(text)
+    readlines(text)

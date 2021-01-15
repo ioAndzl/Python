@@ -1,0 +1,8 @@
+import os 
+import shutil 
+
+#µ os.getcwd() 
+#µ shutil.remtree('empty_directory')
+
+if __name__ == "__main__"  :
+    pass    

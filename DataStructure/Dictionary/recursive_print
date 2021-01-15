@@ -26,6 +26,9 @@ def recursive_key_values(dictionary):
             yield (key, str(value))
 
 
+def aa():
+    pass
+
 mydata =  {
     "key2": {
         "key2.0": "value1",

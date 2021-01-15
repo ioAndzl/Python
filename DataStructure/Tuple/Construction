@@ -1,0 +1,8 @@
+#As a list but immutable
+tt = ('a', 'b', 'c', 2, 2)
+gg = {}
+gg[('a'), ('b')] = 2
+
+if __name__ == "__main__"  :
+    print(tt)
+    print(gg)
