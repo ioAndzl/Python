@@ -1,0 +1,26 @@
+class Person:
+    ''' This is a Person '''
+    age = 10
+    def __init__(self, num):
+        self.num = num
+    
+    def greetings(self):
+        print("Hello, you are welcome")
+
+    def get_number(self):
+        print("Your number is %i"%(self.num))
+
+
+class Aadil(Person):
+    ''' This is Aadil '''
+
+    def __init__(self, num):
+        super().__init__(num)
+
+
+if __name__ == "__main__":
+    aa = Aadil(5)
+    aa.get_number()
+    #Method Resolution Order
+    print(Aadil.__mro__)
+    print(Aadil.mro())

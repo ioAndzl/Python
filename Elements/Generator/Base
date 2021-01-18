@@ -1,0 +1,52 @@
+def generator():
+    """ An example of generator """
+    n = 1
+    print("first")
+    yield n 
+
+    n += 1
+    print("second")
+    yield n 
+
+    n += 1
+    print("third")
+    yield n 
+
+def loop_generator(my_list):
+    generator = (x**2 for x in my_list)
+    return generator
+
+## Chain of iterators
+def fibonacci_numbers(nums):
+    x,y = 0,1
+    for _ in range(nums):
+        x,y = y,x+1
+        yield x
+
+def square(nums):
+    for num in nums:
+        yield num**2
+
+    
+if __name__ == "__main__":
+    my_list = [1,2,3,4]
+    gg = generator()
+    # for i in range(3):
+    #     next(gg)
+    # for item in gg:
+    #     print(item)
+
+    
+    # gen = loop_generator(my_list)
+    # for i in gen:
+    #     print(i)
+
+    #µ max(x**2 for x in my_list)
+    #µ sum(x**2 for x in my_list)
+
+    for x in square(fibonacci_numbers(5)):
+        print(x)
+
+
+
+        

@@ -1,5 +1,4 @@
 
-
 def try_except_else(): 
     try: 
         num = int(input("Enter a number"))
