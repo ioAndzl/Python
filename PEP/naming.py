@@ -15,6 +15,8 @@ class AirCraft:
 class SpaceShip:
     pass
 
+# write function names as x_y
+
 # Write module name in lowercase
 import os
 import sys
