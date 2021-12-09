@@ -86,9 +86,4 @@ class RightPyramid(Square, Triangle):
         base_area = super().area()
         triangle_area = super().tri_area()
         return triangle_area * 4 + base_area
-
-
-
-
-
-
+        
